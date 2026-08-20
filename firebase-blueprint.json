@@ -1,0 +1,85 @@
+{
+  "entities": {
+    "chats": {
+      "title": "Chat Messages",
+      "description": "Direct message threads between patients and healthcare professionals",
+      "type": "object",
+      "properties": {
+        "providerId": { "type": "string" },
+        "providerName": { "type": "string" },
+        "sender": { "type": "string" },
+        "text": { "type": "string" },
+        "timestamp": { "type": "string" },
+        "createdAt": { "type": "number" }
+      },
+      "required": ["providerId", "sender", "text"]
+    },
+    "bookings": {
+      "title": "Appointments",
+      "description": "Booked appointments with healthcare specialists",
+      "type": "object",
+      "properties": {
+        "service": { "type": "string" },
+        "professional": { "type": "string" },
+        "visitType": { "type": "string" },
+        "date": { "type": "string" },
+        "time": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["service", "professional", "date", "time"]
+    },
+    "diaryEntries": {
+      "title": "Health Diary Entries",
+      "description": "Daily health tracker logs including pain, mood, exercise, and notes",
+      "type": "object",
+      "properties": {
+        "pain": { "type": "number" },
+        "mood": { "type": "string" },
+        "exercise": { "type": "string" },
+        "notes": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["pain", "createdAt"]
+    },
+    "profileSettings": {
+      "title": "User Profile Settings",
+      "description": "User profile settings and health parameters",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "age": { "type": "string" },
+        "goals": { "type": "string" },
+        "conditions": { "type": "string" },
+        "ecName": { "type": "string" },
+        "ecPhone": { "type": "string" }
+      },
+      "required": ["name", "email"]
+    },
+    "providers": {
+      "title": "Healthcare Professionals",
+      "description": "Registered healthcare providers, doctors, and specialists with certifications and practice details",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "service": { "type": "string" },
+        "licenseNumber": { "type": "string" },
+        "qualification": { "type": "string" },
+        "experienceYears": { "type": "number" },
+        "phone": { "type": "string" },
+        "email": { "type": "string" },
+        "area": { "type": "string" },
+        "lat": { "type": "number" },
+        "lng": { "type": "number" },
+        "rating": { "type": "number" },
+        "reviewCount": { "type": "number" },
+        "photo": { "type": "string" },
+        "bio": { "type": "string" },
+        "consultationFee": { "type": "number" },
+        "isVerified": { "type": "boolean" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["name", "service", "area"]
+    }
+  }
+}
